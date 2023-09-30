@@ -1,9 +1,9 @@
 import React from 'react'
 import './PopularProductSection.css'
-import { addToCart } from '../../Saga/Action'
+import { addToCart } from '../../Cart/Redux/Action'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { productList } from '../../Cart/Redux/ProductAction'
+import  productList  from '../../Cart/Redux/ProductAction'
 import { useEffect } from 'react'
 
 const PopularProductCard_Latest = () => {

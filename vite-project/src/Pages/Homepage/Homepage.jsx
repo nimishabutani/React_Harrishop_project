@@ -18,22 +18,26 @@ const Homepage = () => {
       <Navbar />
       <Section1 />
       <ProductCorousol />
-      <div className='container-2xl px-32   w-full   mt-20  grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1  xs:grid-cols-1 '>
-        <div className=' w-full h-auto border-0 border-l-4 border-custom-pink   '>
-          <h1 className='text-3xl font-bold ps-3  '>Popular Products</h1>
+
+
+
+      <div className='container-2xl h-auto mx-auto mt-36'>
+        <div className='flex-none sm:flex justify-between w-11/12 2xl:w-10/12 mx-auto'>
+          <div className=''>
+            <h1 className='font-bold border-0 border-custom-pink border-l-4 text-4xl pl-5'>Popular Product</h1>
+          </div>
+          <div className='mt-7 sm:mt-0 group'>
+            <Link to='PopularProductCard_top' className='me-6 group-open:text-custom-pink'>Top Rated</Link>
+            <Link to='PopularProductCard_best' className='me-6 group-open:text-custom-pink'>Best Selling</Link>
+            <Link to='PopularProductCard_Latest' className='group-open:text-custom-pink'>Latest Product</Link>
+          </div>
         </div>
-        <div className=' w-full   sm:mt-10 xs:mt-10 md:mt-0 lg:ps-56 '>
-          <ul className='text-gray-700 font font-semibold flex  '>
-            <Link to='/' className=' px-2 me-10 border-0 border-b-4 border-custom-pink' >Top Rated</Link>
-            <Link to='Bestselling' className='px-2 me-10 border-0 border-b-4 border-custom-pink' >Best Selling</Link>
-            <Link to='Latestproduct' className='px-2  border-0 border-b-4 border-custom-pink' >Latest Product</Link>
-          </ul>
-          <Outlet/>
-        </div>
+        <PopularProductCard_top />
+        <Outlet />
       </div>
-      
-       <PopularProductCard_top/>
-      
+
+
+
       <div className=' xs:px-0 md:px-32 mt-32  w-full  grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1  xs:grid-cols-1'>
         <div className=' w-full h-auto border-0 border-l-4 border-custom-pink   '>
           <h1 className='text-3xl font-bold ps-3  '>Deal Of The Day</h1>

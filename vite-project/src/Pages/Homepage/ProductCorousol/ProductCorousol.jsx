@@ -14,6 +14,7 @@ const ProductCorousol = () => {
                 <Swiper
                 scrollbar={{
                     hide: false,
+                    
                   }}
                     slidesPerView={4}
                     spaceBetween={30}

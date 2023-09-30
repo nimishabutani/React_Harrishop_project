@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import './PopularProductSection.css'
-import { addToCart } from '../../Saga/Action'
+import { addToCart } from '../../Cart/Redux/Action'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { productList } from '../../Saga/Product/Productlist'
+import  productList  from '../../Cart/Redux/ProductAction'
 
 const PopularProductCard_best = () => {
 
@@ -17,9 +17,9 @@ const PopularProductCard_best = () => {
     return (
         <>
             <div className='container-2xl mx-auto'>
-                <div className='w-11/12 2xl:w-10/12 mx-auto'>
+                <div className='w-full 2xl:w-full mx-auto'>
 
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center '>
                         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 xl:gap-16 2xl:gap-10 mt-10'>
 
                             {data.filter((el) => { return el.type === 'best selling' }).map((ele) => {
